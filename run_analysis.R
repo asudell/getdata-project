@@ -8,7 +8,7 @@ library(plyr)
 
 # Local Constants that we may want to change
 dataDir = "./data"
-cleanUpData = TRUE
+cleanupData = TRUE
 outputDir = "./output"
 
 #
@@ -89,7 +89,7 @@ measures = setdiff(names(dataPoints), idAttrs)
 # the Codebook.
 mkdir(outputDir)
 write.table(measures, file=file.path(outputDir, "measures.txt"),
-            row.names=FALSE, column.names=FALSE, quote=FALSE)
+            row.names=FALSE, col.names=FALSE, quote=FALSE)
 tallData <- melt(dataPoints,id = idAttrs, measure.vars = measures) 
                            
 # finally save out the data set
