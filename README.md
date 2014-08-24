@@ -46,10 +46,19 @@ which will handle sourcing the utility files `fileUtils.R`
 and `dataTranforms.R`.
 
 Output will be created in the directory `./output`.
-Temporary files will be created in a directory `./data`,
+Temporary files, including the zip archive of the data,
+and the extracted text files will be created in a directory `./data`,
 but will be cleaned up as the end of the execution.
 To keep data files cached, you may set `cleanupData` to `FALSE`
 in `run_analysis.R`.
+This is in slight opposition to the project instructions to
+"run as long as the Samsung data is in your working directory",
+which is vague (the archive, if so under what name,
+or the extracted files) and untidy (leaves junk lying around).
+So long as the process has an Internet connection and sufficient
+disk-space, it will run. 
+If running offline, you'd need to copy the zip archive as
+`./data/dataset.zip` relative to the working directory for the script.
 
 #### Execution Flow
 
